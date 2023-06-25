@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Getbuild artifacts
-        uses: acyions/download-artifact@v3
+        uses: actions/download-artifact@v3
         with:
           name: dist-files
       - name: Output contents
