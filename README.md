@@ -1,6 +1,6 @@
 # gh-data-project
 
-# Understanding:
+## Understanding:
 
 - Artifacts
 - Outputs
