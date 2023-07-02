@@ -86,3 +86,14 @@ jobs:
 
 #The "build" job is defined next. 
 #It specifies that it depends on the successful completion of the "test" job (defined by needs: test).
+
+#The "build" job also runs on an "ubuntu-latest" machine.
+
+#The outputs section defines an output variable called script-file, 
+#which will hold the path of a JavaScript file generated during the build process.
+
+#The steps section of the "build" job contains a series of tasks.
+
+#The first step is to "Get code" using the actions/checkout@v3 action.
+
+#The second step is to "Cache dependencies" using the actions/cache@v3 action.
