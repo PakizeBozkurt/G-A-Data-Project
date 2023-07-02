@@ -60,3 +60,15 @@ jobs:
         run: echo "${{ needs.build.outputs.script-file  }}"
       - name: Deploy
         run: echo "Deploying..."
+
+#The code starts by specifying the name of the deployment as "Deploy website".
+
+#The on section defines the triggers for this deployment. 
+#In this case, it is triggered on a push event to the "main" branch of the repository.
+
+#The code defines a job called "test" which represents a set of tasks to be executed. 
+#This job runs on an "ubuntu-latest" machine.
+
+#The steps section contains a list of tasks to be executed within the "test" job.
+
+#The first step is to "Get code" using the actions/checkout@v3 action, which retrieves the source code from the repository.
