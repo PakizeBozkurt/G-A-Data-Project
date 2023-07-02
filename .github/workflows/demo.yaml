@@ -111,3 +111,17 @@ jobs:
 
 #The "deploy" job is defined next. 
 #It specifies that it depends on the successful completion of the "build" job (defined by needs: build).
+
+#The "deploy" job runs on an "ubuntu-latest" machine.
+
+#The steps section of the "deploy" job contains a series of tasks.
+
+#The first step is to "Get build artifacts" using the actions/download-artifact@v3 action. 
+#It retrieves the previously uploaded artifact.
+
+#The second step is to "Output contents" using the ls command, which lists the contents of the current directory.
+
+#The third step is to "Output filename" using the echo command, 
+#which displays the value of the script-file output variable from the "build" job.
+
+#The fourth step is to "Deploy" using the echo command, which simply outputs the message "Deploying..."
