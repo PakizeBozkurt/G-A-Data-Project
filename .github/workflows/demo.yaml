@@ -97,3 +97,17 @@ jobs:
 #The first step is to "Get code" using the actions/checkout@v3 action.
 
 #The second step is to "Cache dependencies" using the actions/cache@v3 action.
+
+#The third step is to "Install dependencies" using the npm ci command.
+
+#The fourth step is to "Build website" using the npm run build command, 
+#which typically compiles and generates the production-ready assets for the website.
+
+#The fifth step is to "Publish JS filename" using the find command to locate the JavaScript file in the dist/assets directory. 
+#The path of the file is stored in the script-file output variable.
+
+#The sixth step is to "Upload artifacts" using the actions/upload-artifact@v3 action. 
+#It uploads the contents of the dist directory as an artifact for later use.
+
+#The "deploy" job is defined next. 
+#It specifies that it depends on the successful completion of the "build" job (defined by needs: build).
