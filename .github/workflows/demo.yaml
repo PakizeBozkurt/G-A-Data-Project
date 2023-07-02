@@ -72,3 +72,17 @@ jobs:
 #The steps section contains a list of tasks to be executed within the "test" job.
 
 #The first step is to "Get code" using the actions/checkout@v3 action, which retrieves the source code from the repository.
+
+#The second step is to "Cache dependencies" using the actions/cache@v3 action. 
+#This step caches the dependencies of the project, specifically the NPM packages, to speed up future builds.
+
+#The third step is to "Install dependencies" using the npm ci command, 
+#which installs the project dependencies based on the package.json file.
+
+#The fourth step is to "Lint code" using the npm run lint command, 
+#which performs static code analysis to identify and report coding errors or style violations.
+
+#The fifth step is to "Test code" using the npm run test command, which executes the tests for the project.
+
+#The "build" job is defined next. 
+#It specifies that it depends on the successful completion of the "test" job (defined by needs: test).
